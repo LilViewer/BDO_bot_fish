@@ -12,8 +12,17 @@
 
 ### Установка всех зависемостей 
 
-- Если нет python, то установите, [желательно 3.11](https://www.python.org/downloads/)
+- Если нет python, то установите, [3.11+](https://www.python.org/downloads/)
 - Установить драйвер [interception](https://github.com/oblitum/Interception/releases/tag/v1.0.1), нужен для имитации кликов, для установки скачайте и разархивируйте zip, в CMD(от имени Адменистратора) открыть папку `command line installer` и выволните - `install-interception.exe /install` и перезапустите ПК
+     - Из папки `library/x64` перенести файл `interception.dll` в папку бота
+- Перенести из репозитория [AutoHotpy](https://github.com/dc740/AutoHotPy/tree/master), в папку бота, файлы:
+     [AutoHotPy.py](https://github.com/dc740/AutoHotPy/blob/1f751d1aa0c7c264e5b29a9e13a4dea3cab11407/AutoHotPy.py,AutoHotPy.py),
+     [InterceptionWrapper.py](https://github.com/dc740/AutoHotPy/blob/1f751d1aa0c7c264e5b29a9e13a4dea3cab11407/InterceptionWrapper.py,InterceptionWrapper.py)
+
+-  Скачайте [Tesseract-ocr](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.1.20230401.exe) в папку с ботом или в желаемое место с указанием пути до `tesseract.exe`
+     ```Python
+     40# pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
+     ```
 - Установить библиотеки
   ```
   pip install numpy
@@ -52,17 +61,17 @@
 
 1. Запуск скрипта, по стандарту на F4, можно менять по желанию
     ```Python
-    auto.registerForKeyDown(auto.F4, enableDisableSuperCombo)
+    498# auto.registerForKeyDown(auto.F4, enableDisableSuperCombo)
     ```
 
 2. Выбор монитора на котором будет работать скрипт, если больше одного смотрите порядок в системе Windows
     ```Python
-    monitor=0
+    13# monitor=0
     ```
 
 3. Вкл/выкл проверки на прочность удочки/инветоря и бег на прожажу/починку, для отключение прописать `False`
     ```Python
-    Nips = True
+    43# Nips = True
     ```
 
 4. Изменение функции ToRun(autohotpy), если вы рыбачите в Велии, от торговца, к конюшне и обратно на рыбвлку, то вам будет достаточно и имеющиесего кода, в противном случае, редактируйте под свои задачи
@@ -71,34 +80,34 @@
 
     4.1. Функция SearchNip определяет на какую точку побежать, если написать 1, то он поставит точку соответственно вашему второму пункту избраного
     ```Python
-    SearchNip(autohotpy, 0)
+    362-406# SearchNip(autohotpy, 0)
     ```
     
     4.2. leftButton эмуляция ЛКМ, sleep(*) - задержка до следуюшей строчки кода 
     ```Python
-    sleep(.2)
-    leftButton(autohotpy)
-    sleep(1)
+    407# sleep(.2)
+    408# leftButton(autohotpy)
+    409# sleep(1)
     ```
 
     4.3. autohotpy.*.press() - функция для эмитации клавиатуры, заместо * ставьте желаемую клавишу, для цифр 1,2,3 и т.д указывайте N1,N2,N3
     ```Python
-    autohotpy.R.press()
-    sleep(1)
-    autohotpy.N1.press()
+    368# autohotpy.R.press()
+    369# sleep(1)
+    370# autohotpy.N1.press()
     ```
 
     4.4. autohotpy.moveMouseToPosition(*, *) сдвиг мышки до отпределеных коорденат
     ```Python
-    autohotpy.N2.press()
-    autohotpy.moveMouseToPosition(728, 801)  # Починка всего
-    leftButton(autohotpy)
+    392# autohotpy.N2.press()
+    393# autohotpy.moveMouseToPosition(728, 801)  # Починка всего
+    394# leftButton(autohotpy)
     ```
     
 
 5. Количество занятых слотов когда бежать на продажу
    ```Python
-   inventary = 35
+   46# inventary = 35
    ```
   
 ### Проблема Бота
@@ -108,8 +117,8 @@
 ![Мини-игра](https://sun9-45.userapi.com/impg/Sv3Gqg7KheQRC8EtAh3Tu6mCaf5pt7Ap2BZDKA/Ku5EK5AHMkg.jpg?size=320x76&quality=96&sign=1a1a398fcbc343733dd7a3d1991eaa59&type=album, 'Мини-игра')
   
 ```Python
-sleep(1.5)
-miniGameThree(autohotpy)
+134# sleep(1.5)
+135# miniGameThree(autohotpy)
 ```
 
 ### Запуск Бота
