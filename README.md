@@ -117,8 +117,11 @@
 ![Мини-игра](https://sun9-45.userapi.com/impg/Sv3Gqg7KheQRC8EtAh3Tu6mCaf5pt7Ap2BZDKA/Ku5EK5AHMkg.jpg?size=320x76&quality=96&sign=1a1a398fcbc343733dd7a3d1991eaa59&type=album, 'Мини-игра')
   
 ```Python
-134# sleep(1.5)
-135# miniGameThree(autohotpy)
+#464 sleep(1.2)
+#465
+#466 t = Timer(40, enableStart)
+#467 t.start()
+#468 miniGameOne(autohotpy)
 ```
 
 ### Запуск Бота
