@@ -46,7 +46,7 @@
 - Хот-кей поиска НИП
 
   Установите <kbd>Alt</kbd>+<kbd>V</kbd>, в противном случае другое сочетание
-  ###### в строчке 321, файла TestAuto.py поменять ```autohotpy.V.press()``` на желаемое
+  ###### в строчке 321, файла start.py поменять ```autohotpy.V.press()``` на желаемое
 
   ![Поиск НИП](https://sun9-69.userapi.com/impg/PS_GB9L2Xbc0Z-9fJqzsM0wgFSKiTRS1kJQFQA/6lnBcbvRBkw.jpg?size=451x232&quality=96&sign=8c6ba67511a692af7c0607e3084a634b&type=album, 'Поиск НИП')
 
